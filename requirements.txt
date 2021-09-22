@@ -1,0 +1,6 @@
+discord.py
+discord
+asyncio
+colorama
+init
+requests
