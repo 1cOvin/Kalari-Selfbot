@@ -136,7 +136,7 @@ async def fox(ctx):
         await ctx.send(r['image'])
 
 @Snow.command()
-async def hypesquad(ctx, house): # b'\xfc'
+async def hypesquad(ctx, house):
     await ctx.message.delete()
     request = requests.Session()
     headers = {
