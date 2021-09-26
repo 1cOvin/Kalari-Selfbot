@@ -22,7 +22,7 @@ from discord.ext import (
 token = config.get('token')
 prefix = config.get('prefix')
 
-nitro_sniper = config.get('nitro_sniper')
+nitro_sniper = config.get('nitro_sniper') 
 
 Kalari = discord.Client()
 Kalari = commands.Bot( description='Kalari Selfbot', command_prefix=prefix, self_bot=True
