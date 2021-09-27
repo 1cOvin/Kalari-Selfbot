@@ -387,4 +387,4 @@ async def ipcheck(ctx, *, yz: str = '127.0.0.1'):
         if field['value']: em.add_field(name=field['name'], value=field['value'], inline=True)
     return await ctx.send(embed=em)
 
-Kalari.run(token, bot=False)
+Kalari.run(token, bot=False) 
