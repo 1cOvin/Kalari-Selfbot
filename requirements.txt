@@ -4,3 +4,4 @@ asyncio
 colorama
 init
 requests
+gtts
