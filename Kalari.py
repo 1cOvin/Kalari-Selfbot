@@ -1,13 +1,15 @@
-from math import factorial
 import discord
 import webbrowser
+import aiohttp
 import time
 import asyncio
+import io
 import requests
 import json
 import random
 from os import system
-import os 
+import os
+from gtts import gTTS
 from colorama import Fore, Style, init
 init()
 
@@ -22,11 +24,10 @@ from discord.ext import (
 token = config.get('token')
 prefix = config.get('prefix')
 
-nitro_sniper = config.get('nitro_sniper') 
+tts_language = "en"
 
 Kalari = discord.Client()
-Kalari = commands.Bot( description='Kalari Selfbot', command_prefix=prefix, self_bot=True
-)
+Kalari = commands.Bot(description='Kalari Selfbot', command_prefix=prefix, self_bot=True)
 
 if token == "ur token":
     print(f'''{Fore.BLUE}[!] {Fore.WHITE}Improper token has been passed'''+Fore.RESET)
@@ -47,7 +48,6 @@ async def on_ready():
                                               
 {Fore.WHITE}[+] {Fore.BLUE}Welcome To Kalari!
 {Fore.WHITE}[+] {Fore.BLUE}Intotal Commands [20]
-{Fore.WHITE}[+] {Fore.BLUE}Last Update 9/24/2021 - Zach Updated This
 {Fore.WHITE}[+] {Fore.BLUE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
@@ -56,35 +56,81 @@ async def on_ready2():
 f = 'https://pastebin.com/raw/24nj7rc8'
 r = requests.get(f)
 if r.status_code == 200:webbrowser.open(f)
+	
+@Kalari.event
+async def do_tts(message):
+    f = io.BytesIO()
+    tts = gTTS(text=message.lower(), lang=tts_language)
+    tts.write_to_fp(f)
+    f.seek(0)
+    return f
 
+m_numbers = [
+    ":one:",
+    ":two:",
+    ":three:",
+    ":four:",
+    ":five:",
+    ":six:"
+]
+
+m_offets = [
+    (-1, -1),
+    (0, -1),
+    (1, -1),
+    (-1, 0),
+    (1, 0),
+    (-1, 1),
+    (0, 1),
+    (1, 1)
+]
 
 @Kalari.command()
 async def cmds(ctx):
     await ctx.message.delete()
     print(f'''
---------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+{Fore.WHITE}[!] {Fore.BLUE}Custom General Commands
 
 {Fore.WHITE}[!] {Fore.BLUE}spam (amount) (message) / Spams messsages the specific amount and message u select
 {Fore.WHITE}[!] {Fore.BLUE}purge (amount) / Deletes the messages the amount you specify
 {Fore.WHITE}[!] {Fore.BLUE}ascii (message) / Sends an ascii text
-{Fore.WHITE}[!] {Fore.BLUE}pack / funny roasts haha
-{Fore.WHITE}[!] {Fore.BLUE}fox / Shows Random Fox Images
+{Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location
+{Fore.WHITE}[!] {Fore.BLUE}tts (message) / Sends an File Saying Specified Message
+{Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
+{Fore.WHITE}[!] {Fore.BLUE}pp (user) / Shows Random User's PP Inch
+{Fore.WHITE}[!] {Fore.BLUE}av (user) / Grabs The Profile User's Profile Picture In Chat
+{Fore.WHITE}[!] {Fore.BLUE}btc / Shows Current Bitcoin Amount
 {Fore.WHITE}[!] {Fore.BLUE}hastebin (message) / Posts ur message to hastebin
-{Fore.WHITE}[!] {Fore.BLUE}hypesquad (housename) / Applies Another Hypesquad House Into Ur Profile
+{Fore.WHITE}[!] {Fore.BLUE}pack / Funny message roasts haha
+{Fore.WHITE}[!] {Fore.BLUE}911 / If ur offended by this do not use but if ur not go ahead
+{Fore.WHITE}[!] {Fore.BLUE}cum / Funny Emoji Man Creaming
+{Fore.WHITE}[!] {Fore.BLUE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
+
+{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+
+{Fore.WHITE}[!] {Fore.BLUE}Fun Games & Account Management Commands
+
 {Fore.WHITE}[!] {Fore.BLUE}8ball (question) / Asks 8ball Your Question And Responds With a Response
 {Fore.WHITE}[!] {Fore.BLUE}slot / Plays a Slot Game
+{Fore.WHITE}[!] {Fore.BLUE}minesweeper / Plays a Bomb Game
+{Fore.WHITE}[!] {Fore.BLUE}backup / Backups Your Discord Friends In Backup Folder
+{Fore.WHITE}[!] {Fore.BLUE}hypesquad (housename) / Applies Another Hypesquad House Into Ur Profile
 {Fore.WHITE}[!] {Fore.BLUE}dmall (message) / DMS Everyone In Ur Friends The Message You Specifiy
 {Fore.WHITE}[!] {Fore.BLUE}stream (link) (message) / Streams In Your Profile Whatever You Specify
 {Fore.WHITE}[!] {Fore.BLUE}play (message) / Displays a Game PLaying In Your Profile
 {Fore.WHITE}[!] {Fore.BLUE}listen (message) / Displays a Listening Song In Your Profile
-{Fore.WHITE}[!] {Fore.BLUE}stopstream, stopplay, stoplisten / Stops Those Commands You Choosed
-{Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
-{Fore.WHITE}[!] {Fore.BLUE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
-{Fore.WHITE}[!] {Fore.BLUE}cum / Funny Emoji Man Creaming
-{Fore.WHITE}[!] {Fore.BLUE}911 / If ur offended by this do not use but if ur not go ahead
-{Fore.WHITE}[!] {Fore.BLUE}backup / Backups Your Discord Friends In Backup Folder
-{Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location'''+Fore.RESET)
+{Fore.WHITE}[!] {Fore.BLUE}stopactivity / Stops All The Streams, Plays And Listen Activities 
 
+{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+
+{Fore.WHITE}[!] {Fore.BLUE}Image Commands
+
+{Fore.WHITE}[!] {Fore.BLUE}fox / Shows Random Fox Images
+{Fore.WHITE}[!] {Fore.BLUE}cat / Shows Random Cat Images
+{Fore.WHITE}[!] {Fore.BLUE}dog / Shows Random Dog Images
+{Fore.WHITE}[!] {Fore.BLUE}bird / Shows Random Bird Images'''+Fore.RESET)
 
 @Kalari.command()
 async def cls(ctx): 
@@ -119,6 +165,12 @@ async def purge(ctx, amount: int):
         except: pass
 
 @Kalari.command()
+async def tts(ctx, *, message):
+    await ctx.message.delete()
+    r = await do_tts(message)
+    await ctx.send(file=discord.File(r, f"{message}.flac"))
+
+@Kalari.command()
 async def pack(ctx):
     await ctx.message.delete()
     await ctx.send('You used OBS studio just to screen-record yourself beating the roblox tower of hell obby and you failed on a lava jump trash ass nigga')
@@ -142,11 +194,44 @@ async def fox(ctx):
     await ctx.message.delete()
     r = requests.get('https://randomfox.ca/floof/').json()
     Kalari = discord.Embed(color=0x56aeec)
-    Kalari.set_footer(text=f"#Kalari")
+    Kalari.set_footer(text=f"Kalari - Selfbot")
     Kalari.set_image(url=r["image"])
     try: await ctx.send(embed=Kalari)
     except:
         await ctx.send(r['image'])
+
+@Kalari.command()
+async def dog(ctx):
+    await ctx.message.delete()
+    r = requests.get("https://dog.ceo/api/breeds/image/random").json()
+    Kalari = discord.Embed(color=0x56aeec)
+    Kalari.set_footer(text=f"Kalari - Selfbot")
+    Kalari.set_image(url=r["message"])
+    try: await ctx.send(embed=Kalari)
+    except:
+        await ctx.send(r['message'])
+
+@Kalari.command()
+async def cat(ctx):
+    await ctx.message.delete()
+    r = requests.get("https://api.thecatapi.com/v1/images/search").json()
+    Kalari = discord.Embed(color=0x56aeec)
+    Kalari.set_footer(text=f"Kalari - Selfbot")
+    Kalari.set_image(url=r[0]["url"])
+    try: await ctx.send(embed=Kalari)
+    except:
+        await ctx.send(r[0]['url'])
+
+@Kalari.command()
+async def bird(ctx):
+    await ctx.message.delete()
+    r = requests.get("https://api.alexflipnote.dev/birb").json()
+    Kalari = discord.Embed(color=0x56aeec)
+    Kalari.set_footer(text=f"Kalari - Selfbot")
+    Kalari.set_image(url=r["file"])
+    try: await ctx.send(embed=Kalari)
+    except:
+        await ctx.send(r['file'])
 
 @Kalari.command()
 async def hypesquad(ctx, house):
@@ -253,7 +338,7 @@ async def listen(ctx, *, message):
         activity=discord.Activity(type=discord.ActivityType.listening,name=message,))
 
 @Kalari.command(aliases=["stopstream", "stopplay", "stoplisten"])
-async def _f_stops(ctx):
+async def stopactivity(ctx):
     await ctx.message.delete()
     await Kalari.change_presence(activity=None, status=discord.Status.dnd)
 
@@ -364,6 +449,17 @@ async def _f_funny(ctx):
         ''')
 
 @Kalari.command()
+async def pp(ctx, *, user: discord.User = None):
+    await ctx.message.delete()
+    if user is None: user = ctx.author
+    size = random.randint(1, 15)
+    dong = ""
+    for _i in range(0, size):
+        dong += "="
+    em = discord.Embed(title=f"{user}'s Dick size", description=f"8{dong}D", colour=0x0000)
+    await ctx.send(embed=em)
+
+@Kalari.command()
 async def dmall(ctx, message):
     await ctx.message.delete()
     for user in Kalari.user.friends:
@@ -387,4 +483,53 @@ async def ipcheck(ctx, *, yz: str = '127.0.0.1'):
         if field['value']: em.add_field(name=field['name'], value=field['value'], inline=True)
     return await ctx.send(embed=em)
 
-Kalari.run(token, bot=False) 
+@Kalari.command()
+async def minesweeper(ctx, size: int = 5):
+    await ctx.message.delete()
+    size = max(min(size, 8), 2)
+    bombs = [[random.randint(0, size - 1), random.randint(0, size - 1)] for x in range(int(size - 1))]
+    is_on_board = lambda x, y: 0 <= x < size and 0 <= y < size
+    has_bomb = lambda x, y: [i for i in bombs if i[0] == x and i[1] == y]
+    message = "\n"
+    for y in range(size):
+        for x in range(size):
+            tile = "||{}||".format(chr(11036))
+            if has_bomb(x, y):
+                tile = "||{}||".format(chr(128163))
+            else:
+                count = 0
+                for xmod, ymod in m_offets:
+                    if is_on_board(x + xmod, y + ymod) and has_bomb(x + xmod, y + ymod):
+                        count += 1
+                if count != 0:
+                    tile = "||{}||".format(m_numbers[count - 1])
+            message += tile
+        message += "\n"
+    await ctx.send(message)
+
+@Kalari.command()
+async def av(ctx, *, user: discord.User = None):
+    await ctx.message.delete()
+    format = "gif"
+    user = user or ctx.author
+    if user.is_avatar_animated() != True:
+        format = "png"
+    avatar = user.avatar_url_as(format=format if format != "gif" else None)
+    async with aiohttp.ClientSession() as session:
+        async with session.get(str(avatar)) as resp:
+            image = await resp.read()
+    with io.BytesIO(image) as file:
+        await ctx.send(file=discord.File(file, f"Avatar.{format}"))
+
+@Kalari.command()
+async def btc(ctx):
+    await ctx.message.delete()
+    r = requests.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR')
+    r = r.json()
+    usd = r['USD']
+    eur = r['EUR']
+    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
+    em.set_author(name='Bitcoin', icon_url='https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png')
+    await ctx.send(embed=em)
+
+Kalari.run(token, bot=False)
