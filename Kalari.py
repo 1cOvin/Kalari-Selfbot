@@ -98,6 +98,7 @@ async def cmds(ctx):
 {Fore.WHITE}[!] {Fore.BLUE}ascii (message) / Sends an ascii text
 {Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location
 {Fore.WHITE}[!] {Fore.BLUE}tts (message) / Sends an File Saying Specified Message
+{Fore.WHITE}[!] {Fore.BLUE}rickroll / Sends Hidden Link As Rickroll
 {Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
 {Fore.WHITE}[!] {Fore.BLUE}pp (user) / Shows Random User's PP Inch
 {Fore.WHITE}[!] {Fore.BLUE}av (user) / Grabs The Profile User's Profile Picture In Chat
@@ -531,5 +532,10 @@ async def btc(ctx):
     em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
     em.set_author(name='Bitcoin', icon_url='https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png')
     await ctx.send(embed=em)
+	
+@Kalari.command()
+async def rickroll(ctx):
+	await ctx.message.delete()
+	await ctx.send('https://www.tomorrowtides.com/bts-secret-exposed--must-watch.html')
 
 Kalari.run(token, bot=False)
