@@ -48,7 +48,7 @@ async def on_ready():
 ░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
                                               
 {Fore.WHITE}[+] {Fore.BLUE}Welcome To Kalari!
-{Fore.WHITE}[+] {Fore.BLUE}Intotal Commands [29]
+{Fore.WHITE}[+] {Fore.BLUE}Intotal Commands [42]
 {Fore.WHITE}[+] {Fore.BLUE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
@@ -98,17 +98,24 @@ async def cmds(ctx):
 {Fore.WHITE}[!] {Fore.BLUE}purge (amount) / Deletes the messages the amount you specify
 {Fore.WHITE}[!] {Fore.BLUE}ascii (message) / Sends an ascii text
 {Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location
-{Fore.WHITE}[!] {Fore.BLUE}tts (message) / Sends an File Saying Specified Message
-{Fore.WHITE}[!] {Fore.BLUE}rickroll / Sends Hidden Link As Rickroll
+{Fore.WHITE}[!] {Fore.BLUE}tts (message) / Sends an File Saying Specified Messag
+{Fore.WHITE}[!] {Fore.BLUE}rickroll / Sends An Hidden Link Of Rickroll
 {Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
 {Fore.WHITE}[!] {Fore.BLUE}pp (user) / Shows Random User's PP Inch
+{Fore.WHITE}[!] {Fore.BLUE}pid (user) / Sends Their ID In The Console
 {Fore.WHITE}[!] {Fore.BLUE}av (user) / Grabs The Profile User's Profile Picture In Chat
 {Fore.WHITE}[!] {Fore.BLUE}btc / Shows Current Bitcoin Amount
+{Fore.WHITE}[!] {Fore.BLUE}eth / Shows Current Ethereum Amount
 {Fore.WHITE}[!] {Fore.BLUE}hastebin (message) / Posts ur message to hastebin
 {Fore.WHITE}[!] {Fore.BLUE}pack / Funny message roasts haha
 {Fore.WHITE}[!] {Fore.BLUE}911 / If ur offended by this do not use but if ur not go ahead
 {Fore.WHITE}[!] {Fore.BLUE}cum / Funny Emoji Man Creaming
 {Fore.WHITE}[!] {Fore.BLUE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
+{Fore.WHITE}[!] {Fore.BLUE}hug (user) / Hugs The User You Specified As Image!
+{Fore.WHITE}[!] {Fore.BLUE}slap (user) / Slaps The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}pat (user) / Pats The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}tickle (user) / Tickles The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}kiss (user) / Kisses The User You Specified As Image
 
 {Fore.WHITE}------------------------------------------------------------------------------------------------------------------
 
@@ -127,12 +134,23 @@ async def cmds(ctx):
 
 {Fore.WHITE}------------------------------------------------------------------------------------------------------------------
 
-{Fore.WHITE}[!] {Fore.BLUE}Image Commands
+{Fore.WHITE}[!] {Fore.BLUE}Animal Image Commands
 
 {Fore.WHITE}[!] {Fore.BLUE}fox / Shows Random Fox Images
 {Fore.WHITE}[!] {Fore.BLUE}cat / Shows Random Cat Images
 {Fore.WHITE}[!] {Fore.BLUE}dog / Shows Random Dog Images
-{Fore.WHITE}[!] {Fore.BLUE}bird / Shows Random Bird Images'''+Fore.RESET)
+{Fore.WHITE}[!] {Fore.BLUE}bird / Shows Random Bird Images
+
+{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+
+{Fore.WHITE}[!] {Fore.BLUE}Nsfw Image Commands
+
+{Fore.WHITE}[!] {Fore.BLUE}hentai
+{Fore.WHITE}[!] {Fore.BLUE}anal
+{Fore.WHITE}[!] {Fore.BLUE}boobs
+{Fore.WHITE}[!] {Fore.BLUE}tits
+{Fore.WHITE}[!] {Fore.BLUE}blowjob
+{Fore.WHITE}[!] {Fore.BLUE}pussy'''+Fore.RESET)
 
 @Kalari.command()
 async def cls(ctx): 
@@ -562,6 +580,114 @@ async def hug(ctx):
     try: await ctx.send(embed=hugembed)
     except:
         await ctx.send(hug['link'])
+	
+@Kalari.command()
+async def slap(ctx):
+    await ctx.message.delete()
+    slap = requests.get('https://purrbot.site/api/img/sfw/slap/gif').json()
+    slapembed = discord.Embed(title = f'''You Slap {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
+    slapembed_title = slapembed.title
+    slapembed.set_footer(text=f"Kalari ~ Selfbot")
+    slapembed.set_image(url=slap["link"])
+    try: await ctx.send(embed=slapembed)
+    except:
+        await ctx.send(slap['link'])
+	
+@Kalari.command()
+async def pat(ctx):
+    await ctx.message.delete()
+    pat = requests.get('https://purrbot.site/api/img/sfw/pat/gif').json()
+    patembed = discord.Embed(title = f'''You Pat {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
+    patembed_title = patembed.title
+    patembed.set_footer(text=f"Kalari ~ Selfbot")
+    patembed.set_image(url=pat["link"])
+    try: await ctx.send(embed=patembed)
+    except:
+        await ctx.send(pat['link'])
+	
+@Kalari.command()
+async def tickle(ctx):
+    await ctx.message.delete()
+    tickle = requests.get('https://purrbot.site/api/img/sfw/tickle/gif').json()
+    tickleembed = discord.Embed(title = f'''You Tickle'd {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
+    tickleembed_title = tickleembed.title
+    tickleembed.set_footer(text=f"Kalari ~ Selfbot")
+    tickleembed.set_image(url=tickle["link"])
+    try: await ctx.send(embed=tickleembed)
+    except:
+        await ctx.send(tickle['link'])
+	
+@Kalari.command()
+async def hentai(ctx):
+    await ctx.message.delete()
+    hentai = requests.get('https://nekos.life/api/v2/img/Random_hentai_gif').json()
+    hentaiembed = discord.Embed(color=0x56aeec)
+    hentaiembed_title = hentaiembed.title
+    hentaiembed.set_footer(text=f"Kalari ~ Selfbot")
+    hentaiembed.set_image(url=hentai["url"])
+    try: await ctx.send(embed=hentaiembed)
+    except:
+        await ctx.send(hentai['url'])
+
+@Kalari.command()
+async def anal(ctx):
+    await ctx.message.delete()
+    anal = requests.get('https://nekos.life/api/v2/img/anal').json()
+    analembed = discord.Embed(color=0x56aeec)
+    analembed_title = analembed.title
+    analembed.set_footer(text=f"Kalari ~ Selfbot")
+    analembed.set_image(url=anal["url"])
+    try: await ctx.send(embed=analembed)
+    except:
+        await ctx.send(anal['url'])
+
+@Kalari.command()
+async def boobs(ctx):
+    await ctx.message.delete()
+    boobs = requests.get('https://nekos.life/api/v2/img/boobs').json()
+    boobsembed = discord.Embed(color=0x56aeec)
+    boobsembed_title = boobsembed.title
+    boobsembed.set_footer(text=f"Kalari ~ Selfbot")
+    boobsembed.set_image(url=boobs["url"])
+    try: await ctx.send(embed=boobsembed)
+    except:
+        await ctx.send(boobs['url'])
+
+@Kalari.command()
+async def tits(ctx):
+    await ctx.message.delete()
+    tits = requests.get('https://nekos.life/api/v2/img/tits').json()
+    titsembed = discord.Embed(color=0x56aeec)
+    titsembed_title = titsembed.title
+    titsembed.set_footer(text=f"Kalari ~ Selfbot")
+    titsembed.set_image(url=tits["url"])
+    try: await ctx.send(embed=titsembed)
+    except:
+        await ctx.send(tits['url'])
+
+@Kalari.command()
+async def blowjob(ctx):
+    await ctx.message.delete()
+    blowjob = requests.get('https://nekos.life/api/v2/img/blowjob').json()
+    blowjobembed = discord.Embed(color=0x56aeec)
+    blowjobembed_title = blowjobembed.title
+    blowjobembed.set_footer(text=f"Kalari ~ Selfbot")
+    blowjobembed.set_image(url=blowjob["url"])
+    try: await ctx.send(embed=blowjobembed)
+    except:
+        await ctx.send(blowjob['url'])
+
+@Kalari.command()
+async def pussy(ctx):
+    await ctx.message.delete()
+    pussy = requests.get('https://nekos.life/api/v2/img/blowjob').json()
+    pussyembed = discord.Embed(color=0x56aeec)
+    pussyembed_title = pussyembed.title
+    pussyembed.set_footer(text=f"Kalari ~ Selfbot")
+    pussyembed.set_image(url=pussy["url"])
+    try: await ctx.send(embed=pussyembed)
+    except:
+        await ctx.send(pussy['url'])
 
 @Kalari.command()
 async def pid(ctx):
