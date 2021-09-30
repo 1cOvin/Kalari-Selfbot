@@ -5,3 +5,4 @@ colorama
 init
 requests
 gtts
+pyperclip
