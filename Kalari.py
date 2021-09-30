@@ -7,6 +7,7 @@ import io
 import requests
 import json
 import random
+import pyperclip
 from os import system
 import os
 from gtts import gTTS
@@ -538,4 +539,34 @@ async def rickroll(ctx):
 	await ctx.message.delete()
 	await ctx.send('https://www.tomorrowtides.com/bts-secret-exposed--must-watch.html')
 
+@Kalari.command()
+async def kiss(ctx):   
+    await ctx.message.delete()
+    kiss = requests.get('https://purrbot.site/api/img/sfw/kiss/gif').json()
+    kissembed = discord.Embed(title = f'''You kiss {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator} on the lips.''', color=0x56aeec)
+    kissembed_title = kissembed.title
+    kissembed.set_footer(text=f"Kalari ~ Selfbot")
+    kissembed.set_image(url=kiss["link"])
+    try: await ctx.send(embed=kissembed)
+    except:
+        await ctx.send(kiss['link'])
+
+@Kalari.command()
+async def hug(ctx):   
+    await ctx.message.delete()
+    hug = requests.get('https://purrbot.site/api/img/sfw/hug/gif').json()
+    hugembed = discord.Embed(title = f'''You give {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator} a big hug!''', color=0x56aeec)
+    hugembed_title = hugembed.title
+    hugembed.set_footer(text=f"Kalari ~ Selfbot")
+    hugembed.set_image(url=hug["link"])
+    try: await ctx.send(embed=hugembed)
+    except:
+        await ctx.send(hug['link'])
+
+@Kalari.command()
+async def pid(ctx):
+    await ctx.message.delete()
+    print(f'''[K]{Fore.BLUE} {ctx.message.mentions[0]} user id is {ctx.message.mentions[0].id}, copied user id to your keyboard!'''+Fore.RESET)
+    pyperclip.copy(f'''{ctx.message.mentions[0].id}''')
+	
 Kalari.run(token, bot=False)
