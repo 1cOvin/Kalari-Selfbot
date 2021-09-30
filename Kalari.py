@@ -553,6 +553,17 @@ async def btc(ctx):
     await ctx.send(embed=em)
 	
 @Kalari.command()
+async def eth(ctx):
+    await ctx.message.delete()
+    r = requests.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,EUR')
+    r = r.json()
+    usd = r['USD']
+    eur = r['EUR']
+    em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
+    em.set_author(name='Ethereum', icon_url='https://cdn.discordapp.com/attachments/803287566517927957/893083574562066482/eth.png')
+    await ctx.send(embed=em)
+	
+@Kalari.command()
 async def rickroll(ctx):
 	await ctx.message.delete()
 	await ctx.send('https://www.tomorrowtides.com/bts-secret-exposed--must-watch.html')
