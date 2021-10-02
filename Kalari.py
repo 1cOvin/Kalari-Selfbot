@@ -48,7 +48,7 @@ async def on_ready():
 ░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
                                               
 {Fore.WHITE}[+] {Fore.BLUE}Welcome To Kalari!
-{Fore.WHITE}[+] {Fore.BLUE}Intotal Commands [42]
+{Fore.WHITE}[+] {Fore.BLUE}Intotal Commands [50]
 {Fore.WHITE}[+] {Fore.BLUE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
@@ -90,34 +90,34 @@ m_offets = [
 async def cmds(ctx):
     await ctx.message.delete()
     print(f'''
------------------------------------------------------------------------------------------------------------------
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 {Fore.WHITE}[!] {Fore.BLUE}Custom General Commands
 
-{Fore.WHITE}[!] {Fore.BLUE}spam (amount) (message) / Spams messsages the specific amount and message u select
-{Fore.WHITE}[!] {Fore.BLUE}purge (amount) / Deletes the messages the amount you specify
-{Fore.WHITE}[!] {Fore.BLUE}ascii (message) / Sends an ascii text
+{Fore.WHITE}[!] {Fore.BLUE}spam (Amount) (Message) / Spams messsages the specific amount and message u select
+{Fore.WHITE}[!] {Fore.BLUE}purge (Amount) / Deletes the messages the amount you specify
+{Fore.WHITE}[!] {Fore.BLUE}ascii (Message) / Sends an ascii text
 {Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location
-{Fore.WHITE}[!] {Fore.BLUE}tts (message) / Sends an File Saying Specified Messag
+{Fore.WHITE}[!] {Fore.BLUE}tts (Message) / Sends an File Saying Specified Messag
 {Fore.WHITE}[!] {Fore.BLUE}rickroll / Sends An Hidden Link Of Rickroll
 {Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
-{Fore.WHITE}[!] {Fore.BLUE}pp (user) / Shows Random User's PP Inch
-{Fore.WHITE}[!] {Fore.BLUE}pid (user) / Sends Their ID In The Console
-{Fore.WHITE}[!] {Fore.BLUE}av (user) / Grabs The Profile User's Profile Picture In Chat
+{Fore.WHITE}[!] {Fore.BLUE}pp (User) / Shows Random User's PP Inch
+{Fore.WHITE}[!] {Fore.BLUE}pid (User) / Sends Their ID In The Console
+{Fore.WHITE}[!] {Fore.BLUE}av (User) / Grabs The Profile User's Profile Picture In Chat
 {Fore.WHITE}[!] {Fore.BLUE}btc / Shows Current Bitcoin Amount
 {Fore.WHITE}[!] {Fore.BLUE}eth / Shows Current Ethereum Amount
-{Fore.WHITE}[!] {Fore.BLUE}hastebin (message) / Posts ur message to hastebin
+{Fore.WHITE}[!] {Fore.BLUE}hastebin (Message) / Posts ur message to hastebin
 {Fore.WHITE}[!] {Fore.BLUE}pack / Funny message roasts haha
 {Fore.WHITE}[!] {Fore.BLUE}911 / If ur offended by this do not use but if ur not go ahead
 {Fore.WHITE}[!] {Fore.BLUE}cum / Funny Emoji Man Creaming
 {Fore.WHITE}[!] {Fore.BLUE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
-{Fore.WHITE}[!] {Fore.BLUE}hug (user) / Hugs The User You Specified As Image!
-{Fore.WHITE}[!] {Fore.BLUE}slap (user) / Slaps The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}pat (user) / Pats The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}tickle (user) / Tickles The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}kiss (user) / Kisses The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}hug (User) / Hugs The User You Specified As Image!
+{Fore.WHITE}[!] {Fore.BLUE}slap (User) / Slaps The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}pat (User) / Pats The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}tickle (User) / Tickles The User You Specified As Image
+{Fore.WHITE}[!] {Fore.BLUE}kiss (User) / Kisses The User You Specified As Image
 
-{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 {Fore.WHITE}[!] {Fore.BLUE}Fun Games & Account Management Commands
 
@@ -126,13 +126,24 @@ async def cmds(ctx):
 {Fore.WHITE}[!] {Fore.BLUE}minesweeper / Plays a Bomb Game
 {Fore.WHITE}[!] {Fore.BLUE}backup / Backups Your Discord Friends In Backup Folder
 {Fore.WHITE}[!] {Fore.BLUE}hypesquad (housename) / Applies Another Hypesquad House Into Ur Profile
-{Fore.WHITE}[!] {Fore.BLUE}dmall (message) / DMS Everyone In Ur Friends The Message You Specifiy
-{Fore.WHITE}[!] {Fore.BLUE}stream (link) (message) / Streams In Your Profile Whatever You Specify
-{Fore.WHITE}[!] {Fore.BLUE}play (message) / Displays a Game PLaying In Your Profile
-{Fore.WHITE}[!] {Fore.BLUE}listen (message) / Displays a Listening Song In Your Profile
-{Fore.WHITE}[!] {Fore.BLUE}stopactivity / Stops All The Streams, Plays And Listen Activities 
+{Fore.WHITE}[!] {Fore.BLUE}dmall (Message) / DMS Everyone In Ur Friends The Message You Specifiy
+{Fore.WHITE}[!] {Fore.BLUE}stream (link) (Message) / Streams In Your Profile Whatever You Specify
+{Fore.WHITE}[!] {Fore.BLUE}play (Message) / Displays a Game PLaying In Your Profile
+{Fore.WHITE}[!] {Fore.BLUE}listen (Message) / Displays a Listening Song In Your Profile
+{Fore.WHITE}[!] {Fore.BLUE}stopactivity / Stops All The Streams, Plays And Listen Activities
+{Fore.WHITE}[!] {Fore.BLUE}leavegroups / Leaves All The Groups You're In
 
-{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+{Fore.WHITE}[!] {Fore.BLUE}Raiding Commands
+
+{Fore.WHITE}[!] {Fore.BLUE}masschannels (Message) / Mass Creates Channels With Your Specified Message
+{Fore.WHITE}[!] {Fore.BLUE}delchannels / Deletes All The Channels
+{Fore.WHITE}[!] {Fore.BLUE}massroles (Message) / Mass Creates Roles With Your Specified Message
+{Fore.WHITE}[!] {Fore.BLUE}delroles / Deletes All The Roles
+{Fore.WHITE}[!] {Fore.BLUE}guildname (Message) / Changes The Server Name With Your Specified Message
+
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 {Fore.WHITE}[!] {Fore.BLUE}Animal Image Commands
 
@@ -141,7 +152,7 @@ async def cmds(ctx):
 {Fore.WHITE}[!] {Fore.BLUE}dog / Shows Random Dog Images
 {Fore.WHITE}[!] {Fore.BLUE}bird / Shows Random Bird Images
 
-{Fore.WHITE}------------------------------------------------------------------------------------------------------------------
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
 {Fore.WHITE}[!] {Fore.BLUE}Nsfw Image Commands
 
@@ -705,5 +716,51 @@ async def pid(ctx):
     await ctx.message.delete()
     print(f'''[K]{Fore.BLUE} {ctx.message.mentions[0]} user id is {ctx.message.mentions[0].id}, copied user id to your keyboard!'''+Fore.RESET)
     pyperclip.copy(f'''{ctx.message.mentions[0].id}''')
+
+@Kalari.command()
+async def leavegroups(ctx):
+    await ctx.message.delete()
+    for channel in Kalari.private_channels:
+        if isinstance(channel, discord.GroupChannel):
+            await channel.leave()
+
+@Kalari.command()
+async def masschannels(ctx, message):
+    await ctx.message.delete()
+    for _i in range(250):
+        await ctx.guild.create_text_channel(name=message)
+
+@Kalari.command()
+async def delchannels(ctx):
+    await ctx.message.delete()
+    for channel in list(ctx.guild.channels):
+        try:
+            await channel.delete()
+        except:
+            return
+
+@Kalari.command()
+async def massrole(ctx, message):
+    await ctx.message.delete()
+    for _i in range(250):
+        try:
+            await ctx.guild.create_role(name=message)
+        except:
+            try:
+                await ctx.guild.create_role(name=message)
+            except:
+                return
+
+@Kalari.command()
+async def delroles(ctx):
+    await ctx.message.delete()
+    for role in list(ctx.guild.roles):
+        try: await role.delete()
+        except: pass
+
+@Kalari.command()
+async def guildname(ctx, message):
+  await ctx.message.delete()
+  await ctx.guild.edit(name=message)
 	
 Kalari.run(token, bot=False)
