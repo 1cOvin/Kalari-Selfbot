@@ -92,76 +92,77 @@ async def cmds(ctx):
     print(f'''
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
-{Fore.WHITE}[!] {Fore.BLUE}Custom General Commands
+{Fore.BLUE}[!] {Fore.WHITE}Custom General Commands
 
-{Fore.WHITE}[!] {Fore.BLUE}spam (Amount) (Message) / Spams messsages the specific amount and message u select
-{Fore.WHITE}[!] {Fore.BLUE}purge (Amount) / Deletes the messages the amount you specify
-{Fore.WHITE}[!] {Fore.BLUE}ascii (Message) / Sends an ascii text
-{Fore.WHITE}[!] {Fore.BLUE}ipcheck (IP) / Checks The IP Address Location
-{Fore.WHITE}[!] {Fore.BLUE}tts (Message) / Sends an File Saying Specified Messag
-{Fore.WHITE}[!] {Fore.BLUE}rickroll / Sends An Hidden Link Of Rickroll
-{Fore.WHITE}[!] {Fore.BLUE}cls / Clears Your Console Screen
-{Fore.WHITE}[!] {Fore.BLUE}pp (User) / Shows Random User's PP Inch
-{Fore.WHITE}[!] {Fore.BLUE}pid (User) / Sends Their ID In The Console
-{Fore.WHITE}[!] {Fore.BLUE}av (User) / Grabs The Profile User's Profile Picture In Chat
-{Fore.WHITE}[!] {Fore.BLUE}btc / Shows Current Bitcoin Amount
-{Fore.WHITE}[!] {Fore.BLUE}eth / Shows Current Ethereum Amount
-{Fore.WHITE}[!] {Fore.BLUE}hastebin (Message) / Posts ur message to hastebin
-{Fore.WHITE}[!] {Fore.BLUE}pack / Funny message roasts haha
-{Fore.WHITE}[!] {Fore.BLUE}911 / If ur offended by this do not use but if ur not go ahead
-{Fore.WHITE}[!] {Fore.BLUE}cum / Funny Emoji Man Creaming
-{Fore.WHITE}[!] {Fore.BLUE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
-{Fore.WHITE}[!] {Fore.BLUE}hug (User) / Hugs The User You Specified As Image!
-{Fore.WHITE}[!] {Fore.BLUE}slap (User) / Slaps The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}pat (User) / Pats The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}tickle (User) / Tickles The User You Specified As Image
-{Fore.WHITE}[!] {Fore.BLUE}kiss (User) / Kisses The User You Specified As Image
-
-{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-
-{Fore.WHITE}[!] {Fore.BLUE}Fun Games & Account Management Commands
-
-{Fore.WHITE}[!] {Fore.BLUE}8ball (question) / Asks 8ball Your Question And Responds With a Response
-{Fore.WHITE}[!] {Fore.BLUE}slot / Plays a Slot Game
-{Fore.WHITE}[!] {Fore.BLUE}minesweeper / Plays a Bomb Game
-{Fore.WHITE}[!] {Fore.BLUE}backup / Backups Your Discord Friends In Backup Folder
-{Fore.WHITE}[!] {Fore.BLUE}hypesquad (housename) / Applies Another Hypesquad House Into Ur Profile
-{Fore.WHITE}[!] {Fore.BLUE}dmall (Message) / DMS Everyone In Ur Friends The Message You Specifiy
-{Fore.WHITE}[!] {Fore.BLUE}stream (link) (Message) / Streams In Your Profile Whatever You Specify
-{Fore.WHITE}[!] {Fore.BLUE}play (Message) / Displays a Game PLaying In Your Profile
-{Fore.WHITE}[!] {Fore.BLUE}listen (Message) / Displays a Listening Song In Your Profile
-{Fore.WHITE}[!] {Fore.BLUE}stopactivity / Stops All The Streams, Plays And Listen Activities
-{Fore.WHITE}[!] {Fore.BLUE}leavegroups / Leaves All The Groups You're In
+{Fore.BLUE}[!] {Fore.WHITE}spam (Amount) (Message) / Spams messsages the specific amount and message u select
+{Fore.BLUE}[!] {Fore.WHITE}purge (Amount) / Deletes the messages the amount you specify
+{Fore.BLUE}[!] {Fore.WHITE}ascii (Message) / Sends an ascii text
+{Fore.BLUE}[!] {Fore.WHITE}ipcheck (IP) / Checks The IP Address Location
+{Fore.BLUE}[!] {Fore.WHITE}tts (Message) / Sends an File Saying Specified Messag
+{Fore.BLUE}[!] {Fore.WHITE}rickroll / Sends An Hidden Link Of Rickroll
+{Fore.BLUE}[!] {Fore.WHITE}cls / Clears Your Console Screen
+{Fore.BLUE}[!] {Fore.WHITE}pp (User) / Shows Random User's PP Inch
+{Fore.BLUE}[!] {Fore.WHITE}pid (User) / Sends Their ID In The Console
+{Fore.BLUE}[!] {Fore.WHITE}av (User) / Grabs The Profile User's Profile Picture In Chat
+{Fore.BLUE}[!] {Fore.WHITE}btc / Shows Current Bitcoin Amount
+{Fore.BLUE}[!] {Fore.WHITE}eth / Shows Current Ethereum Amount
+{Fore.BLUE}[!] {Fore.WHITE}hastebin (Message) / Posts ur message to hastebin
+{Fore.BLUE}[!] {Fore.WHITE}pack / Funny message roasts haha
+{Fore.BLUE}[!] {Fore.WHITE}911 / If ur offended by this do not use but if ur not go ahead
+{Fore.BLUE}[!] {Fore.WHITE}cum / Funny Emoji Man Creaming
+{Fore.BLUE}[!] {Fore.WHITE}crashvid / Sends The Crash Video (If Someone Clicks On The Video, It Will Crash Their Discord Client
+{Fore.BLUE}[!] {Fore.WHITE}hug (User) / Hugs The User You Specified As Image!
+{Fore.BLUE}[!] {Fore.WHITE}slap (User) / Slaps The User You Specified As Image
+{Fore.BLUE}[!] {Fore.WHITE}pat (User) / Pats The User You Specified As Image
+{Fore.BLUE}[!] {Fore.WHITE}tickle (User) / Tickles The User You Specified As Image
+{Fore.BLUE}[!] {Fore.WHITE}kiss (User) / Kisses The User You Specified As Image
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
-{Fore.WHITE}[!] {Fore.BLUE}Raiding Commands
+{Fore.BLUE}[!] {Fore.WHITE}Fun Games & Account Management Commands
 
-{Fore.WHITE}[!] {Fore.BLUE}masschannels (Message) / Mass Creates Channels With Your Specified Message
-{Fore.WHITE}[!] {Fore.BLUE}delchannels / Deletes All The Channels
-{Fore.WHITE}[!] {Fore.BLUE}massroles (Message) / Mass Creates Roles With Your Specified Message
-{Fore.WHITE}[!] {Fore.BLUE}delroles / Deletes All The Roles
-{Fore.WHITE}[!] {Fore.BLUE}guildname (Message) / Changes The Server Name With Your Specified Message
-
-{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-
-{Fore.WHITE}[!] {Fore.BLUE}Animal Image Commands
-
-{Fore.WHITE}[!] {Fore.BLUE}fox / Shows Random Fox Images
-{Fore.WHITE}[!] {Fore.BLUE}cat / Shows Random Cat Images
-{Fore.WHITE}[!] {Fore.BLUE}dog / Shows Random Dog Images
-{Fore.WHITE}[!] {Fore.BLUE}bird / Shows Random Bird Images
+{Fore.BLUE}[!] {Fore.WHITE}8ball (question) / Asks 8ball Your Question And Responds With a Response
+{Fore.BLUE}[!] {Fore.WHITE}slot / Plays a Slot Game
+{Fore.BLUE}[!] {Fore.WHITE}minesweeper / Plays a Bomb Game
+{Fore.BLUE}[!] {Fore.WHITE}backup / Backups Your Discord Friends In Backup Folder
+{Fore.BLUE}[!] {Fore.WHITE}hypesquad (housename) / Applies Another Hypesquad House Into Ur Profile
+{Fore.BLUE}[!] {Fore.WHITE}dmall (Message) / DMS Everyone In Ur Friends The Message You Specifiy
+{Fore.BLUE}[!] {Fore.WHITE}stream (link) (Message) / Streams In Your Profile Whatever You Specify
+{Fore.BLUE}[!] {Fore.WHITE}play (Message) / Displays a Game PLaying In Your Profile
+{Fore.BLUE}[!] {Fore.WHITE}listen (Message) / Displays a Listening Song In Your Profile
+{Fore.BLUE}[!] {Fore.WHITE}stopactivity / Stops All The Streams, Plays And Listen Activities
+{Fore.BLUE}[!] {Fore.WHITE}leavegroups / Leaves All The Groups You're In
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
-{Fore.WHITE}[!] {Fore.BLUE}Nsfw Image Commands
+{Fore.BLUE}[!] {Fore.WHITE}Raiding Commands
 
-{Fore.WHITE}[!] {Fore.BLUE}hentai
-{Fore.WHITE}[!] {Fore.BLUE}anal
-{Fore.WHITE}[!] {Fore.BLUE}boobs
-{Fore.WHITE}[!] {Fore.BLUE}tits
-{Fore.WHITE}[!] {Fore.BLUE}blowjob
-{Fore.WHITE}[!] {Fore.BLUE}pussy'''+Fore.RESET)
+{Fore.BLUE}[!] {Fore.WHITE}masschannels (Message) / Mass Creates Channels With Your Specified Message
+{Fore.BLUE}[!] {Fore.WHITE}delchannels / Deletes All The Channels
+{Fore.BLUE}[!] {Fore.WHITE}massroles (Message) / Mass Creates Roles With Your Specified Message
+{Fore.BLUE}[!] {Fore.WHITE}delroles / Deletes All The Roles
+{Fore.BLUE}[!] {Fore.WHITE}guildname (Message) / Changes The Server Name With Your Specified Message
+{Fore.BLUE}[!] {Fore.WHITE}nuke / Nukes Everything All in Once
+
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+{Fore.BLUE}[!] {Fore.WHITE}Animal Image Commands
+
+{Fore.BLUE}[!] {Fore.WHITE}fox / Shows Random Fox Images
+{Fore.BLUE}[!] {Fore.WHITE}cat / Shows Random Cat Images
+{Fore.BLUE}[!] {Fore.WHITE}dog / Shows Random Dog Images
+{Fore.BLUE}[!] {Fore.WHITE}bird / Shows Random Bird Images
+
+{Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+{Fore.BLUE}[!] {Fore.WHITE}Nsfw Image Commands
+
+{Fore.BLUE}[!] {Fore.WHITE}hentai
+{Fore.BLUE}[!] {Fore.WHITE}anal
+{Fore.BLUE}[!] {Fore.WHITE}boobs
+{Fore.BLUE}[!] {Fore.WHITE}tits
+{Fore.BLUE}[!] {Fore.WHITE}blowjob
+{Fore.BLUE}[!] {Fore.WHITE}pussy'''+Fore.RESET)
 
 @Kalari.command()
 async def cls(ctx): 
@@ -170,19 +171,22 @@ async def cls(ctx):
 
 @Kalari.command()
 async def spam(ctx, x: int, *, f):
-    await ctx.message.delete()    
+    await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Spam]'''+Fore.RESET)    
     for _i in range(x):
         await ctx.send(f)
 
 @Kalari.command()
 async def hastebin(ctx, *, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Hastebin]'''+Fore.RESET)
     r = requests.post("https://hastebin.com/documents", data=message).json()
     await ctx.send(f"<https://hastebin.com/{r['key']}>")
 
 @Kalari.command()
 async def ascii(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Ascii]'''+Fore.RESET)  
     ignore = f'''https://artii.herokuapp.com/make?text={ctx.message.content}'''
     t = requests.get(ignore.replace('.ascii', ''))
     await ctx.send(f'''```{t.text}```''')
@@ -190,6 +194,7 @@ async def ascii(ctx):
 @Kalari.command()
 async def purge(ctx, amount: int):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Purge]'''+Fore.RESET)  
     async for message in ctx.message.channel.history(limit=amount).filter(lambda m: m.author == Kalari.user).map(lambda m: m):
         try:
            await message.delete()
@@ -198,12 +203,14 @@ async def purge(ctx, amount: int):
 @Kalari.command()
 async def tts(ctx, *, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [TTS]'''+Fore.RESET)  
     r = await do_tts(message)
     await ctx.send(file=discord.File(r, f"{message}.flac"))
 
 @Kalari.command()
 async def pack(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pack]'''+Fore.RESET)
     await ctx.send('You used OBS studio just to screen-record yourself beating the roblox tower of hell obby and you failed on a lava jump trash ass nigga')
     await asyncio.sleep(1)
     await ctx.send('Thats why you had a friend for 3 years on roblox that was a girl and when you asked her out on adopt me she reset and disconnected from the game dumb ass nigga fuck is you talkin bout')
@@ -223,6 +230,7 @@ async def pack(ctx):
 @Kalari.command()
 async def fox(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Fox]'''+Fore.RESET)
     r = requests.get('https://randomfox.ca/floof/').json()
     Kalari = discord.Embed(color=0x56aeec)
     Kalari.set_footer(text=f"Kalari - Selfbot")
@@ -234,6 +242,7 @@ async def fox(ctx):
 @Kalari.command()
 async def dog(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Dog]'''+Fore.RESET)
     r = requests.get("https://dog.ceo/api/breeds/image/random").json()
     Kalari = discord.Embed(color=0x56aeec)
     Kalari.set_footer(text=f"Kalari - Selfbot")
@@ -245,6 +254,7 @@ async def dog(ctx):
 @Kalari.command()
 async def cat(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Cat]'''+Fore.RESET)
     r = requests.get("https://api.thecatapi.com/v1/images/search").json()
     Kalari = discord.Embed(color=0x56aeec)
     Kalari.set_footer(text=f"Kalari - Selfbot")
@@ -256,6 +266,7 @@ async def cat(ctx):
 @Kalari.command()
 async def bird(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Bird]'''+Fore.RESET)
     r = requests.get("https://api.alexflipnote.dev/birb").json()
     Kalari = discord.Embed(color=0x56aeec)
     Kalari.set_footer(text=f"Kalari - Selfbot")
@@ -267,6 +278,7 @@ async def bird(ctx):
 @Kalari.command()
 async def hypesquad(ctx, house):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Hypesquad]'''+Fore.RESET)
     request = requests.Session()
     headers = {
       'Authorization': token,
@@ -288,6 +300,7 @@ async def hypesquad(ctx, house):
 @Kalari.command(name='8ball')
 async def ball(ctx, *, question):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [8Ball]'''+Fore.RESET)
     c = [
       'That is a resounding no',
       'It is certain.',
@@ -313,6 +326,7 @@ async def ball(ctx, *, question):
 @Kalari.command()
 async def slot(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Slot]'''+Fore.RESET)
     emojis = "🍎🍊🍐🍋🍉🍇🍓🍒"
     h = random.choice(emojis)
     slotmachine = f"**[ {h} ]\n{ctx.author.name}**,"
@@ -343,6 +357,7 @@ async def crashvid(ctx):
 @Kalari.command()
 async def backup(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Backup]'''+Fore.RESET)
     for user in Kalari.user.friends:
         try:
             with open('Backup\Friends.txt', 'a+') as f:
@@ -351,31 +366,35 @@ async def backup(ctx):
             pass
         
 @Kalari.command()
-async def stream(ctx, url , *, message): 
+async def stream(ctx, url , *, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Stream]'''+Fore.RESET)
     stream = discord.Streaming(name=message, url=url,)
     await Kalari.change_presence(activity=stream) 
 
 @Kalari.command()
 async def play(ctx, *, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Play]'''+Fore.RESET)
     game = discord.Game(name=message)
     await Kalari.change_presence(activity=game)
 
 @Kalari.command()
 async def listen(ctx, *, message):
     await ctx.message.delete()
-    await Kalari.change_presence(
-        activity=discord.Activity(type=discord.ActivityType.listening,name=message,))
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Listen]'''+Fore.RESET)
+    await Kalari.change_presence(activity=discord.Activity(type=discord.ActivityType.listening,name=message,))
 
 @Kalari.command(aliases=["stopstream", "stopplay", "stoplisten"])
 async def stopactivity(ctx):
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Stopactivity]'''+Fore.RESET)
     await ctx.message.delete()
     await Kalari.change_presence(activity=None, status=discord.Status.dnd)
 
 @Kalari.command()
 async def cum(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Cum]'''+Fore.RESET)
     message = await ctx.send('''
             :ok_hand:            :smile:
    :eggplant: :zzz: :necktie: :eggplant: 
@@ -450,6 +469,7 @@ async def cum(ctx):
 @Kalari.command(name='911')
 async def _f_funny(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [911]'''+Fore.RESET)
     abc = f'''👳‍♂️🎅🧔'''
     message = await ctx.send(f'''
 :airplane:            :office:           
@@ -482,6 +502,7 @@ async def _f_funny(ctx):
 @Kalari.command()
 async def pp(ctx, *, user: discord.User = None):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [PP]'''+Fore.RESET)
     if user is None: user = ctx.author
     size = random.randint(1, 15)
     dong = ""
@@ -493,6 +514,7 @@ async def pp(ctx, *, user: discord.User = None):
 @Kalari.command()
 async def dmall(ctx, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Dmall]'''+Fore.RESET)
     for user in Kalari.user.friends:
         try:
             await user.send(message)
@@ -502,6 +524,7 @@ async def dmall(ctx, message):
 @Kalari.command()
 async def ipcheck(ctx, *, yz: str = '127.0.0.1'):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [IPCheck]'''+Fore.RESET)
     r = requests.get(f'http://extreme-ip-lookup.com/json/{yz}')
     geo = r.json()
     em = discord.Embed()
@@ -517,6 +540,7 @@ async def ipcheck(ctx, *, yz: str = '127.0.0.1'):
 @Kalari.command()
 async def minesweeper(ctx, size: int = 5):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Minesweeper]'''+Fore.RESET)
     size = max(min(size, 8), 2)
     bombs = [[random.randint(0, size - 1), random.randint(0, size - 1)] for x in range(int(size - 1))]
     is_on_board = lambda x, y: 0 <= x < size and 0 <= y < size
@@ -541,6 +565,7 @@ async def minesweeper(ctx, size: int = 5):
 @Kalari.command()
 async def av(ctx, *, user: discord.User = None):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Av]'''+Fore.RESET)
     format = "gif"
     user = user or ctx.author
     if user.is_avatar_animated() != True:
@@ -552,20 +577,23 @@ async def av(ctx, *, user: discord.User = None):
     with io.BytesIO(image) as file:
         await ctx.send(file=discord.File(file, f"Avatar.{format}"))
 
+
 @Kalari.command()
 async def btc(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [BTC]'''+Fore.RESET)
     r = requests.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR')
     r = r.json()
     usd = r['USD']
     eur = r['EUR']
     em = discord.Embed(description=f'USD: `{str(usd)}$`\nEUR: `{str(eur)}€`')
-    em.set_author(name='Bitcoin', icon_url='https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png')
+    em.set_author(name='Bitcoin', icon_url='https://cdn.discordapp.com/attachments/803287566517927957/893083583672119337/btc.png')
     await ctx.send(embed=em)
-	
+
 @Kalari.command()
 async def eth(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [ETH]'''+Fore.RESET)
     r = requests.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,EUR')
     r = r.json()
     usd = r['USD']
@@ -582,6 +610,7 @@ async def rickroll(ctx):
 @Kalari.command()
 async def kiss(ctx):   
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Kiss]'''+Fore.RESET)
     kiss = requests.get('https://purrbot.site/api/img/sfw/kiss/gif').json()
     kissembed = discord.Embed(title = f'''You kiss {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator} on the lips.''', color=0x56aeec)
     kissembed_title = kissembed.title
@@ -594,6 +623,7 @@ async def kiss(ctx):
 @Kalari.command()
 async def hug(ctx):   
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Hug]'''+Fore.RESET)
     hug = requests.get('https://purrbot.site/api/img/sfw/hug/gif').json()
     hugembed = discord.Embed(title = f'''You give {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator} a big hug!''', color=0x56aeec)
     hugembed_title = hugembed.title
@@ -606,6 +636,7 @@ async def hug(ctx):
 @Kalari.command()
 async def slap(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Slap]'''+Fore.RESET)
     slap = requests.get('https://purrbot.site/api/img/sfw/slap/gif').json()
     slapembed = discord.Embed(title = f'''You Slap {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
     slapembed_title = slapembed.title
@@ -614,10 +645,11 @@ async def slap(ctx):
     try: await ctx.send(embed=slapembed)
     except:
         await ctx.send(slap['link'])
-	
+
 @Kalari.command()
 async def pat(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pat]'''+Fore.RESET)
     pat = requests.get('https://purrbot.site/api/img/sfw/pat/gif').json()
     patembed = discord.Embed(title = f'''You Pat {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
     patembed_title = patembed.title
@@ -626,10 +658,11 @@ async def pat(ctx):
     try: await ctx.send(embed=patembed)
     except:
         await ctx.send(pat['link'])
-	
+
 @Kalari.command()
 async def tickle(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Tickle]'''+Fore.RESET)
     tickle = requests.get('https://purrbot.site/api/img/sfw/tickle/gif').json()
     tickleembed = discord.Embed(title = f'''You Tickle'd {ctx.message.mentions[0].name + '#' + ctx.message.mentions[0].discriminator}!''', color=0x56aeec)
     tickleembed_title = tickleembed.title
@@ -642,6 +675,7 @@ async def tickle(ctx):
 @Kalari.command()
 async def hentai(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Hentai]'''+Fore.RESET)
     hentai = requests.get('https://nekos.life/api/v2/img/Random_hentai_gif').json()
     hentaiembed = discord.Embed(color=0x56aeec)
     hentaiembed_title = hentaiembed.title
@@ -654,6 +688,7 @@ async def hentai(ctx):
 @Kalari.command()
 async def anal(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Anal]'''+Fore.RESET)
     anal = requests.get('https://nekos.life/api/v2/img/anal').json()
     analembed = discord.Embed(color=0x56aeec)
     analembed_title = analembed.title
@@ -666,6 +701,7 @@ async def anal(ctx):
 @Kalari.command()
 async def boobs(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Boobs]'''+Fore.RESET)
     boobs = requests.get('https://nekos.life/api/v2/img/boobs').json()
     boobsembed = discord.Embed(color=0x56aeec)
     boobsembed_title = boobsembed.title
@@ -678,6 +714,7 @@ async def boobs(ctx):
 @Kalari.command()
 async def tits(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Tits]'''+Fore.RESET)
     tits = requests.get('https://nekos.life/api/v2/img/tits').json()
     titsembed = discord.Embed(color=0x56aeec)
     titsembed_title = titsembed.title
@@ -690,6 +727,7 @@ async def tits(ctx):
 @Kalari.command()
 async def blowjob(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Blowjob]'''+Fore.RESET)
     blowjob = requests.get('https://nekos.life/api/v2/img/blowjob').json()
     blowjobembed = discord.Embed(color=0x56aeec)
     blowjobembed_title = blowjobembed.title
@@ -702,6 +740,7 @@ async def blowjob(ctx):
 @Kalari.command()
 async def pussy(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pussy]'''+Fore.RESET)
     pussy = requests.get('https://nekos.life/api/v2/img/blowjob').json()
     pussyembed = discord.Embed(color=0x56aeec)
     pussyembed_title = pussyembed.title
@@ -714,12 +753,14 @@ async def pussy(ctx):
 @Kalari.command()
 async def pid(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pid]'''+Fore.RESET)
     print(f'''[K]{Fore.BLUE} {ctx.message.mentions[0]} user id is {ctx.message.mentions[0].id}, copied user id to your keyboard!'''+Fore.RESET)
     pyperclip.copy(f'''{ctx.message.mentions[0].id}''')
 
 @Kalari.command()
 async def leavegroups(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Leavegroups]'''+Fore.RESET)
     for channel in Kalari.private_channels:
         if isinstance(channel, discord.GroupChannel):
             await channel.leave()
@@ -727,12 +768,21 @@ async def leavegroups(ctx):
 @Kalari.command()
 async def masschannels(ctx, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Masschannels]'''+Fore.RESET)
     for _i in range(250):
         await ctx.guild.create_text_channel(name=message)
 
 @Kalari.command()
+async def voicechannels(ctx, message):
+    await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [VoiceChannels]'''+Fore.RESET)
+    for i in range(250):
+        await ctx.guild.create_voice_channel(name=message)
+
+@Kalari.command()
 async def delchannels(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [DelChannels]'''+Fore.RESET)
     for channel in list(ctx.guild.channels):
         try:
             await channel.delete()
@@ -742,6 +792,7 @@ async def delchannels(ctx):
 @Kalari.command()
 async def massrole(ctx, message):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Massrole]'''+Fore.RESET)
     for _i in range(250):
         try:
             await ctx.guild.create_role(name=message)
@@ -754,13 +805,64 @@ async def massrole(ctx, message):
 @Kalari.command()
 async def delroles(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Delroles]'''+Fore.RESET)
     for role in list(ctx.guild.roles):
+        print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Deleting Roles..'''+Fore.RESET)
         try: await role.delete()
         except: pass
 
 @Kalari.command()
+async def delemojis(ctx):
+    await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Delemojis]'''+Fore.RESET)
+    for emoji in list(ctx.guild.emojis):
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}Deleting Emojis..'''+Fore.RESET)
+        try:
+            await emoji.delete()
+        except:
+            pass
+
+@Kalari.command()
 async def guildname(ctx, message):
   await ctx.message.delete()
+  print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Guildname]'''+Fore.RESET)
   await ctx.guild.edit(name=message)
+
+@Kalari.command()
+async def nuke(ctx):
+    await ctx.message.delete()
+    print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Nuke]'''+Fore.RESET)
+    for channel in list(ctx.guild.channels):
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}Deleting Channels..'''+Fore.RESET)
+        try:
+            await channel.delete()
+        except:
+            return
+    for role in list(ctx.guild.roles):
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}Deleting Roles..'''+Fore.RESET)
+        try:
+            await role.delete()
+        except:
+            pass
+    for emoji in list(ctx.guild.emojis):
+        try:
+            await emoji.delete()
+        except:
+            pass
+    for _i in range(150):
+            await ctx.guild.edit(name='Kalari Runs You')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Server Name'''+Fore.RESET)
+            await ctx.guild.create_voice_channel(name='NiceServerBro')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Voice Channel'''+Fore.RESET)
+            await ctx.guild.create_voice_channel(name='Kalari Winning')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Voice Channel'''+Fore.RESET)
+            await ctx.guild.create_text_channel(name='YouJustGotBeamed')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Text Channel'''+Fore.RESET)
+            await ctx.guild.create_text_channel(name='flacreset & pwn run you')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Text Channel'''+Fore.RESET)
+            await ctx.guild.create_role(name='Kalari Winning')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
+            await ctx.guild.create_role(name='Fix Ur Server Bro')
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
 	
 Kalari.run(token, bot=False)
