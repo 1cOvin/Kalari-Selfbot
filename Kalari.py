@@ -755,7 +755,7 @@ async def pid(ctx):
     await ctx.message.delete()
     print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pid]'''+Fore.RESET)
     print(f'''[K]{Fore.BLUE} {ctx.message.mentions[0]} user id is {ctx.message.mentions[0].id}, copied user id to your keyboard!'''+Fore.RESET)
-    pyperclip.copy(f'''{ctx.message.mentions[0].id}''')
+    pyperclip.copy(f'''{ctx.message.mentions[0].id}''') # if this doesnt work dm flacreset#0001
 
 @Kalari.command()
 async def leavegroups(ctx):
