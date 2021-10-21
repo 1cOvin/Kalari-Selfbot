@@ -48,7 +48,7 @@ async def on_ready():
 ░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
                                               
 {Fore.BLUE}[+] {Fore.WHITE}Welcome To Kalari!
-{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [50]
+{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [54]
 {Fore.BLUE}[+] {Fore.WHITE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
@@ -116,6 +116,10 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}pat (User) / Pats The User You Specified As Image
 {Fore.BLUE}[!] {Fore.WHITE}tickle (User) / Tickles The User You Specified As Image
 {Fore.BLUE}[!] {Fore.WHITE}kiss (User) / Kisses The User You Specified As Image
+{Fore.BLUE}[!] {Fore.WHITE}plsbeg / Dank Memer Command
+{Fore.BLUE}[!] {Fore.WHITE}plshunt / Dank Memer Command
+{Fore.BLUE}[!] {Fore.WHITE}plsfish / Dank Memer Command
+{Fore.BLUE}[!] {Fore.WHITE}plswork / Dank Memer Command
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -169,6 +173,20 @@ async def cmds(ctx):
 async def cls(ctx): 
     await ctx.message.delete()
     os.system("cls")
+    print(f'''{Fore.BLUE}
+ ██ ▄█▀▄▄▄       ██▓    ▄▄▄       ██▀███   ██▓
+ ██▄█▒▒████▄    ▓██▒   ▒████▄    ▓██ ▒ ██▒▓██▒
+▓███▄░▒██  ▀█▄  ▒██░   ▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒
+▓██ █▄░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██ ▒██▀▀█▄  ░██░
+▒██▒ █▄▓█   ▓██▒░██████▒▓█   ▓██▒░██▓ ▒██▒░██░
+▒ ▒▒ ▓▒▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░░ ▒▓ ░▒▓░░▓  
+░ ░▒ ▒░ ▒   ▒▒ ░░ ░ ▒  ░ ▒   ▒▒ ░  ░▒ ░ ▒░ ▒ ░
+░ ░░ ░  ░   ▒     ░ ░    ░   ▒     ░░   ░  ▒ ░
+░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
+                                              
+{Fore.BLUE}[+] {Fore.WHITE}Welcome To Kalari!
+{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [54]
+{Fore.BLUE}[+] {Fore.WHITE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.command()
 async def spam(ctx, x: int, *, f):
