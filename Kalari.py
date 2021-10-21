@@ -867,6 +867,38 @@ async def nuke(ctx):
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
 		
 @Kalari.command()
+async def plsbeg(ctx):
+    await ctx.message.delete()
+    while True:
+            await ctx.send('pls beg')           
+            print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-BEG] - Running'''+Fore.RESET)
+            await asyncio.sleep(45)
+
+@Kalari.command()
+async def plsfish(ctx):
+    await ctx.message.delete()
+    while True:
+        await ctx.send('pls fish')
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-FISH] - Running'''+Fore.RESET)
+        await asyncio.sleep(40)
+
+@Kalari.command()
+async def plshunt(ctx):
+    await ctx.message.delete()
+    while True:
+        await ctx.send('pls hunt')
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-HUNT] - Running'''+Fore.RESET)
+        await asyncio.sleep(40)
+
+@Kalari.command()
+async def plswork(ctx):
+    await ctx.message.delete()
+    while True:
+        await ctx.send('pls work')
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-WORK] - Running'''+Fore.RESET)
+        await asyncio.sleep(3600)
+
+@Kalari.command()
 async def delwebhook(ctx, webhook):
     await ctx.message.delete()
     os.system(f'curl -X DELETE {webhook}')
