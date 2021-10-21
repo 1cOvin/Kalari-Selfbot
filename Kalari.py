@@ -143,6 +143,7 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}delroles / Deletes All The Roles
 {Fore.BLUE}[!] {Fore.WHITE}guildname (Message) / Changes The Server Name With Your Specified Message
 {Fore.BLUE}[!] {Fore.WHITE}nuke / Nukes Everything All in Once
+{Fore.BLUE}[!] {Fore.WHITE}delwebhook (Url) / Deletes The Webhook
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -864,5 +865,10 @@ async def nuke(ctx):
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
             await ctx.guild.create_role(name='Fix Ur Server Bro')
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
-	
+		
+@Kalari.command()
+async def delwebhook(ctx, webhook):
+    await ctx.message.delete()
+    os.system(f'curl -X DELETE {webhook}')
+
 Kalari.run(token, bot=False)
