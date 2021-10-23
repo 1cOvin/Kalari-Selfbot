@@ -887,6 +887,7 @@ async def nuke(ctx):
 @Kalari.command()
 async def plsbeg(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[!]{Fore.WHITE} [WARNING] - {Fore.YELLOW}FARMING CAN GET YOU BLACKLISTED! I RECOMMEND YOU FARMING FOR 3 HOURS PER DAY'''+Fore.RESET)
     while True:
             await ctx.send('pls beg')           
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-BEG] - Running'''+Fore.RESET)
@@ -895,6 +896,7 @@ async def plsbeg(ctx):
 @Kalari.command()
 async def plsfish(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[!]{Fore.WHITE} [WARNING] - {Fore.YELLOW}FARMING CAN GET YOU BLACKLISTED! I RECOMMEND YOU FARMING FOR 3 HOURS PER DAY'''+Fore.RESET)
     while True:
         await ctx.send('pls fish')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-FISH] - Running'''+Fore.RESET)
@@ -903,6 +905,7 @@ async def plsfish(ctx):
 @Kalari.command()
 async def plshunt(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[!]{Fore.WHITE} [WARNING] - {Fore.YELLOW}FARMING CAN GET YOU BLACKLISTED! I RECOMMEND YOU FARMING FOR 3 HOURS PER DAY'''+Fore.RESET)
     while True:
         await ctx.send('pls hunt')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-HUNT] - Running'''+Fore.RESET)
@@ -911,6 +914,7 @@ async def plshunt(ctx):
 @Kalari.command()
 async def plswork(ctx):
     await ctx.message.delete()
+    print(f'''{Fore.BLUE}[!]{Fore.WHITE} [WARNING] - {Fore.YELLOW}FARMING CAN GET YOU BLACKLISTED! I RECOMMEND YOU FARMING FOR 3 HOURS PER DAY'''+Fore.RESET)
     while True:
         await ctx.send('pls work')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-WORK] - Running'''+Fore.RESET)
