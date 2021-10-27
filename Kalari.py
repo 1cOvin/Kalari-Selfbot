@@ -924,5 +924,6 @@ async def plswork(ctx):
 async def delwebhook(ctx, webhook):
     await ctx.message.delete()
     os.system(f'curl -X DELETE {webhook}')
+    print(f'''{Fore.BLUE}[!] {Fore.WHITE}Successfully Deleted The Webhook!'''+Fore.RESET)
 
 Kalari.run(token, bot=False)
