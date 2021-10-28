@@ -1,5 +1,4 @@
 # Kalari Selfbot
-hot sexy selfbot
 
 Installing Requirements:
 
