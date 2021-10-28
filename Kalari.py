@@ -120,6 +120,7 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}plshunt / Dank Memer Command
 {Fore.BLUE}[!] {Fore.WHITE}plsfish / Dank Memer Command
 {Fore.BLUE}[!] {Fore.WHITE}plswork / Dank Memer Command
+{Fore.BLUE}[!] {Fore.WHITE}stopall / Stops All Dank Memer Commands
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -885,6 +886,14 @@ async def nuke(ctx):
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}Changed Role'''+Fore.RESET)
 		
 @Kalari.command()
+async def stopall(ctx):
+    await ctx.message.delete()
+    stopall.has_been_called = True
+    print(f'''{Fore.BLUE}[!] {Fore.WHITE} [PLS-BEG] - Stopped all dank member stuff.'''+Fore.RESET)
+    pass
+stopall.has_been_called = False
+
+@Kalari.command()
 async def plsbeg(ctx):
     await ctx.message.delete()
     print(f'''{Fore.BLUE}[!]{Fore.WHITE} [WARNING] - {Fore.YELLOW}FARMING CAN GET YOU BLACKLISTED! I RECOMMEND YOU FARMING FOR 3 HOURS PER DAY'''+Fore.RESET)
@@ -892,6 +901,8 @@ async def plsbeg(ctx):
             await ctx.send('pls beg')           
             print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-BEG] - Running'''+Fore.RESET)
             await asyncio.sleep(45)
+            if stopall.has_been_called:
+                break
 
 @Kalari.command()
 async def plsfish(ctx):
@@ -901,6 +912,8 @@ async def plsfish(ctx):
         await ctx.send('pls fish')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-FISH] - Running'''+Fore.RESET)
         await asyncio.sleep(40)
+        if stopall.has_been_called:
+                break
 
 @Kalari.command()
 async def plshunt(ctx):
@@ -910,6 +923,8 @@ async def plshunt(ctx):
         await ctx.send('pls hunt')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-HUNT] - Running'''+Fore.RESET)
         await asyncio.sleep(40)
+        if stopall.has_been_called:
+                break
 
 @Kalari.command()
 async def plswork(ctx):
@@ -919,6 +934,8 @@ async def plswork(ctx):
         await ctx.send('pls work')
         print(f'''{Fore.BLUE}[!] {Fore.WHITE}[PLS-WORK] - Running'''+Fore.RESET)
         await asyncio.sleep(3600)
+        if stopall.has_been_called:
+                break
 
 @Kalari.command()
 async def delwebhook(ctx, webhook):
