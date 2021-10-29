@@ -48,7 +48,7 @@ async def on_ready():
 ░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
                                               
 {Fore.BLUE}[+] {Fore.WHITE}Welcome To Kalari!
-{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [54]
+{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [57]
 {Fore.BLUE}[+] {Fore.WHITE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
