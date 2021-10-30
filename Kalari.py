@@ -1,7 +1,9 @@
+Version = '1.7'
+
 import discord
 import webbrowser
 import aiohttp
-import time
+import datetime
 import asyncio
 import io
 import requests
@@ -48,7 +50,7 @@ async def on_ready():
 ░  ░        ░  ░    ░  ░     ░  ░   ░      ░  
                                               
 {Fore.BLUE}[+] {Fore.WHITE}Welcome To Kalari!
-{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [57]
+{Fore.BLUE}[+] {Fore.WHITE}Intotal Commands [72]
 {Fore.BLUE}[+] {Fore.WHITE}Type .cmds For Commands, You Can Change The Prefix If You Want'''+Fore.RESET)
 
 @Kalari.event
@@ -120,7 +122,18 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}plshunt / Dank Memer Command
 {Fore.BLUE}[!] {Fore.WHITE}plsfish / Dank Memer Command
 {Fore.BLUE}[!] {Fore.WHITE}plswork / Dank Memer Command
-{Fore.BLUE}[!] {Fore.WHITE}stopall / Stops All Dank Memer Commands
+{Fore.BLUE}[!] {Fore.WHITE}stopall / Stops All Dank Memer Commands [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}Kalaris / Cool Kalari Text [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}massreact / Mass Reacts 25 Messages [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}reverse (message) / Reverses The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}bold (message) / Bolds The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}censor (message) / Censors The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}underline (message) / Underlines The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}italicize (message) / Italicizes The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}strike (message) / Strikes The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}quote (message) / Quotes The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}hackertext (message) / HackerTexts The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}whois, @ / Shows Information About Yourself Or The Tagged Discord User
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -137,6 +150,7 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}listen (Message) / Displays a Listening Song In Your Profile
 {Fore.BLUE}[!] {Fore.WHITE}stopactivity / Stops All The Streams, Plays And Listen Activities
 {Fore.BLUE}[!] {Fore.WHITE}leavegroups / Leaves All The Groups You're In
+{Fore.BLUE}[!] {Fore.WHITE}spamgcnames (name) / Spams The Group Chat Name All in Once
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -149,6 +163,9 @@ async def cmds(ctx):
 {Fore.BLUE}[!] {Fore.WHITE}guildname (Message) / Changes The Server Name With Your Specified Message
 {Fore.BLUE}[!] {Fore.WHITE}nuke / Nukes Everything All in Once
 {Fore.BLUE}[!] {Fore.WHITE}delwebhook (Url) / Deletes The Webhook
+{Fore.BLUE}[!] {Fore.WHITE}sendwebook (Url) (Message) / Sends The Webhook The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}spamwebhook (Url) (Message) / Spams The Webhook The Message [NEW COMMAND]
+{Fore.BLUE}[!] {Fore.WHITE}stopspamwebhook / Stops Spamming The Webhook [NEW COMMAND]
 
 {Fore.WHITE}――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -776,6 +793,37 @@ async def pid(ctx):
     print(f'''{Fore.BLUE}[LOG] {Fore.WHITE}Command ran [Pid]'''+Fore.RESET)
     print(f'''[K]{Fore.BLUE} {ctx.message.mentions[0]} user id is {ctx.message.mentions[0].id}, copied user id to your keyboard!'''+Fore.RESET)
     pyperclip.copy(f'''{ctx.message.mentions[0].id}''') # if this doesnt work dm flacreset#0001
+	
+
+@Kalari.command()
+async def whois(ctx, user: discord.Member = None):
+    await ctx.message.delete()
+    if user is None:
+        user = ctx.author
+    if isinstance(ctx.message.channel, discord.Guild):
+        date_format = "%a, %d %b %Y %I:%M %p"
+        em = discord.Embed(description=user.mention)
+        em.set_author(name=str(user), icon_url=user.avatar_url)
+        em.set_thumbnail(url=user.avatar_url)
+        em.add_field(name="Registered", value=user.created_at.strftime(date_format))
+        em.add_field(name="Joined", value=user.joined_at.strftime(date_format))
+        members = sorted(ctx.guild.members, key=lambda m: m.joined_at)
+        em.add_field(name="Join position", value=str(members.index(user) + 1))
+        if len(user.roles) > 1:
+            role_string = ' '.join([r.mention for r in user.roles][1:])
+            em.add_field(name="Roles [{}]".format(len(user.roles) - 1), value=role_string, inline=False)
+        perm_string = ', '.join([str(p[0]).replace("_", " ").title() for p in user.guild_permissions if p[1]])
+        em.add_field(name="Permissions", value=perm_string, inline=False)
+        em.set_footer(text='ID: ' + str(user.id))
+        return await ctx.send(embed=em)
+    else:
+        date_format = "%a, %d %b %Y %I:%M %p"
+        em = discord.Embed(description=user.mention)
+        em.set_author(name=str(user), icon_url=user.avatar_url)
+        em.set_thumbnail(url=user.avatar_url)
+        em.add_field(name="Created", value=user.created_at.strftime(date_format))
+        em.set_footer(text='ID: ' + str(user.id))
+        return await ctx.send(embed=em)
 
 @Kalari.command()
 async def leavegroups(ctx):
@@ -785,6 +833,16 @@ async def leavegroups(ctx):
         if isinstance(channel, discord.GroupChannel):
             await channel.leave()
 
+@Kalari.command()
+async def spamgcname(ctx):
+    await ctx.message.delete()
+    if isinstance(ctx.message.channel, discord.GroupChannel):
+        _V_co = "123456789" # input whatever message you want to spam the groupchat
+        args = ""
+        for letter in _V_co:
+            args = args + letter
+            await ctx.message.channel.edit(name=args)
+		
 @Kalari.command()
 async def masschannels(ctx, message):
     await ctx.message.delete()
@@ -942,5 +1000,94 @@ async def delwebhook(ctx, webhook):
     await ctx.message.delete()
     os.system(f'curl -X DELETE {webhook}')
     print(f'''{Fore.BLUE}[!] {Fore.WHITE}Successfully Deleted The Webhook!'''+Fore.RESET)
+
+@Kalari.command()
+async def sendwebhook(ctx, webhook, message):
+    await ctx.message.delete()
+    vars = DiscordWebhook(url=webhook, content=message)
+    vars.execute()
+    print(f'''{Fore.BLUE}[!] {Fore.WHITE}Successfully Sent The Message To The Webhook!'''+Fore.RESET)
+
+@Kalari.command()
+async def spamwebhook(ctx, webhook, message):
+    await ctx.message.delete()
+    while Kalari:
+        vars = DiscordWebhook(url=webhook, content=message)
+        vars.execute()
+        await asyncio.sleep(0.5)
+        print(f'''{Fore.BLUE}[!] {Fore.WHITE}Spamming The Webhook'''+Fore.RESET)
+        if stopspamwebhook.has_been_called:
+            break
+
+@Kalari.command(aliases=["stopwebhook", "stopspamweb", "stophook", "stopweb"])
+async def stopspamwebhook(ctx):
+    await ctx.message.delete()
+    stopspamwebhook.has_been_called = True
+    print(f'''{Fore.BLUE}[!] {Fore.WHITE} [Spam-Webhook] - Stopped spamming webhooks.'''+Fore.RESET)
+    pass
+stopspamwebhook.has_been_called = False
+
+@Kalari.command()
+async def Kalaris(ctx):
+    await ctx.message.delete()
+    KALARI = ['K', 'KA', 'KAL', 'KALA', 'KALAR', 'KALARI', 'KALARI W', 'KALARI WI', 'KALARI WIN', 'KALARI WINN', 'KALARI WINNI', 'KALARI WINNIN', 'KALARI WINNING', 'KALARI WINNING :', 'KALARI WINNING :D']
+    message = await ctx.send(KALARI[0])
+    await asyncio.sleep(2)
+    for next in KALARI[1:]:
+        await message.edit(content=next)
+        await asyncio.sleep(0.5)
+
+@Kalari.command()
+async def massreact(ctx, emote):
+    await ctx.message.delete()
+    messages = await ctx.message.channel.history(limit=25).flatten()
+    for message in messages:
+        await message.add_reaction(emote)
+
+@Kalari.command()
+async def reverse(ctx, message):
+    await ctx.message.delete()
+    message = message[::-1]
+    await ctx.send(message)
+
+@Kalari.command()
+async def bold(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('**' + message + '**')
+
+@Kalari.command()
+async def censor(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('||' + message + '||')
+
+@Kalari.command()
+async def underline(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('__' + message + '__')
+
+@Kalari.command()
+async def italicize(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('*' + message + '*')
+
+@Kalari.command()
+async def strike(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('~~' + message + '~~')
+
+@Kalari.command()
+async def quote(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('> ' + message)
+
+@Kalari.command()
+async def hackertext(ctx, message):
+    await ctx.message.delete()
+    await ctx.send('`' + message + "`")
+
+@Kalari.command()
+async def shutdown(ctx):
+    await ctx.message.delete()
+    await Kalari.logout()
 
 Kalari.run(token, bot=False)
