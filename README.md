@@ -8,4 +8,4 @@ Installing Requirements:
 
 ⭐ 3. Install The Requirements | install.bat
 
-⭐ 4. Open The startup.bat
+⭐ 4. Run startup.bat
