@@ -8,4 +8,6 @@ Installing Requirements:
 
 ⭐ 3. Install The Requirements | install.bat
 
-⭐ 4. Run startup.bat
+⭐ 4. Input Your Token in config.json
+
+⭐ 5. Run startup.bat
