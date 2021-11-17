@@ -13,6 +13,7 @@ import pyperclip
 from os import system
 import os
 from gtts import gTTS
+from discord_webhook import DiscordWebhook
 from colorama import Fore, Style, init
 init()
 
