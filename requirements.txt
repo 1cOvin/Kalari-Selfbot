@@ -6,3 +6,4 @@ init
 requests
 gtts
 pyperclip
+DiscordWebhook
