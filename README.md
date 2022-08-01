@@ -11,5 +11,3 @@ Installing Requirements:
 ⭐ 4. Input Your Token in config.json
 
 ⭐ 5. Run startup.bat
-
-(STARTING TO WORK AT DEC 17)
